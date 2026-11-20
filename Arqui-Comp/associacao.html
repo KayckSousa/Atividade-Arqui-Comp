@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2b7a78">
+
+  <title>Arquitetura Computacional - Complete a Arquitetura</title>
+
+  <link rel="stylesheet" href="associacao.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="header-content">
+      <div class="logo">🧩</div>
+      <div>
+        <h1>Arquitetura Computacional</h1>
+        <p>Atividade Avaliativa III · Sprint 3</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="intro">
+      <span class="tag">JOGO EDUCATIVO · DESAFIO 02</span>
+
+      <h2>Complete a Arquitetura!</h2>
+
+      <p>
+        Leia as frases e descubra os conceitos de Arquitetura
+        Computacional. Arraste os quadrados com as respostas
+        corretas até os espaços correspondentes.
+      </p>
+    </section>
+
+    <section class="game-panel">
+
+      <div class="section-heading">
+
+        <div>
+          <h2>Complete as frases</h2>
+          <p>Associe os 8 conceitos corretamente.</p>
+        </div>
+
+        <div class="counter">
+          <span id="score">0 de 8</span>
+          <small>Acertos</small>
+        </div>
+
+      </div>
+
+      <div class="progress-container">
+        <div class="progress-info">
+          <span>Progresso do desafio</span>
+          <strong id="progress-text">0%</strong>
+        </div>
+
+        <div class="progress-bar">
+          <div id="progress-fill"></div>
+        </div>
+      </div>
+
+      <div class="questions-container">
+
+        <div class="questions-heading">
+          <h3>Complete as lacunas</h3>
+          <span>Arraste uma resposta para cada frase</span>
+        </div>
+
+        <div id="questions-list"></div>
+
+      </div>
+
+      <div class="answers-container">
+
+        <div class="answers-heading">
+          <div>
+            <h3>Banco de respostas</h3>
+            <p>Utilize os quadrados abaixo para completar as frases.</p>
+          </div>
+
+          <span class="answers-count" id="answers-count">
+            8 disponíveis
+          </span>
+        </div>
+
+        <div id="answers-bank" class="answers-bank"></div>
+
+      </div>
+
+      <div class="actions">
+
+        <button
+          type="button"
+          id="check-button"
+          class="primary-button">
+          ✓ Conferir respostas
+        </button>
+
+        <button
+          type="button"
+          id="reset-button"
+          class="secondary-button">
+          ↻ Reiniciar jogo
+        </button>
+
+      </div>
+
+      <div
+        id="feedback"
+        class="feedback"
+        aria-live="polite">
+      </div>
+
+    </section>
+
+    <section class="instructions">
+
+      <h3>Como jogar?</h3>
+
+      <div class="instruction-grid">
+
+        <div>
+          <span>01</span>
+          <p>Leia atentamente as 8 frases apresentadas.</p>
+        </div>
+
+        <div>
+          <span>02</span>
+          <p>Identifique o conceito correspondente a cada frase.</p>
+        </div>
+
+        <div>
+          <span>03</span>
+          <p>Arraste o quadrado correto até a lacuna.</p>
+        </div>
+
+        <div>
+          <span>04</span>
+          <p>Clique em Conferir para verificar sua pontuação.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <nav class="game-navigation">
+
+      <a href="index.html" class="navigation-link">
+        ← Voltar ao menu principal
+      </a>
+
+      <span>Desafio 02 de Arquitetura Computacional</span>
+
+    </nav>
+
+  </main>
+
+  <footer>
+    <p>Atividade Avaliativa III · Arquitetura Computacional</p>
+    <p>Desenvolvido com HTML, CSS e JavaScript.</p>
+  </footer>
+
+  <script src="associacao.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2b7a78">
+
+  <title>Arquitetura Computacional - Sistemas Numéricos</title>
+
+  <link rel="stylesheet" href="sistema-numericos.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="header-content">
+
+      <div class="logo">🔢</div>
+
+      <div>
+        <h1>Arquitetura Computacional</h1>
+        <p>Atividade Avaliativa III · Sprint 3</p>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- APRESENTAÇÃO -->
+
+    <section class="intro">
+
+      <span class="tag">JOGO EDUCATIVO · DESAFIO 05</span>
+
+      <h2>Desafio dos Sistemas Numéricos!</h2>
+
+      <p>
+        Teste seus conhecimentos sobre sistemas numéricos!
+        Resolva conversões entre números binários, decimais,
+        octais e hexadecimais e escolha a alternativa correta.
+      </p>
+
+    </section>
+
+    <!-- PAINEL DO JOGO -->
+
+    <section class="game-panel">
+
+      <div class="section-heading">
+
+        <div>
+          <h2>Conversão de Sistemas Numéricos</h2>
+          <p>Resolva as questões e descubra os resultados.</p>
+        </div>
+
+        <div class="counter">
+          <span id="score">0 de 16</span>
+          <small>Acertos</small>
+        </div>
+
+      </div>
+
+      <!-- PROGRESSO -->
+
+      <div class="progress-container">
+
+        <div class="progress-info">
+          <span>Progresso do desafio</span>
+          <strong id="progress-text">0%</strong>
+        </div>
+
+        <div class="progress-bar">
+          <div id="progress-fill"></div>
+        </div>
+
+      </div>
+
+      <!-- QUESTÃO -->
+
+      <div class="question-container">
+
+        <div class="question-header">
+
+          <span id="question-number">
+            QUESTÃO 01 DE 16
+          </span>
+
+          <span id="question-category">
+            SISTEMAS NUMÉRICOS
+          </span>
+
+        </div>
+
+        <h3 id="question-title">
+          Qual é o resultado da conversão?
+        </h3>
+
+        <p id="question-description">
+          Analise o número apresentado e escolha a resposta.
+        </p>
+
+        <!-- NÚMERO -->
+
+        <div class="number-container">
+
+          <span id="number-origin">BINÁRIO</span>
+
+          <strong id="number-value">1010</strong>
+
+          <span id="number-destination">
+            CONVERTER PARA DECIMAL
+          </span>
+
+        </div>
+
+        <!-- ALTERNATIVAS -->
+
+        <div class="answer-container">
+
+          <h3>Qual é a resposta correta?</h3>
+
+          <p>Selecione uma das alternativas abaixo.</p>
+
+          <div class="answer-options" id="answer-options">
+
+          </div>
+
+        </div>
+
+        <!-- EXPLICAÇÃO -->
+
+        <div
+          id="feedback"
+          class="feedback"
+          aria-live="polite">
+        </div>
+
+        <!-- CONTROLES -->
+
+        <div class="actions">
+
+          <button
+            type="button"
+            id="next-button"
+            class="primary-button"
+            disabled>
+            Próxima questão →
+          </button>
+
+          <button
+            type="button"
+            id="reset-button"
+            class="secondary-button">
+            ↻ Reiniciar jogo
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- MATERIAL DE APOIO -->
+
+    <section class="instructions">
+
+      <h3>Conheça os sistemas numéricos</h3>
+
+      <div class="instruction-grid">
+
+        <div>
+          <span>DECIMAL · BASE 10</span>
+          <p>
+            Utiliza os algarismos de 0 até 9.
+            Cada posição representa uma potência de 10.
+          </p>
+        </div>
+
+        <div>
+          <span>BINÁRIO · BASE 2</span>
+          <p>
+            Utiliza apenas 0 e 1.
+            Cada posição representa uma potência de 2.
+          </p>
+        </div>
+
+        <div>
+          <span>OCTAL · BASE 8</span>
+          <p>
+            Utiliza os algarismos de 0 até 7.
+            Cada algarismo corresponde a 3 bits.
+          </p>
+        </div>
+
+        <div>
+          <span>HEXADECIMAL · BASE 16</span>
+          <p>
+            Utiliza números de 0 até 9 e letras de A até F.
+            Cada algarismo corresponde a 4 bits.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- TABELA DE APOIO -->
+
+    <section class="reference-section">
+
+      <h3>Tabela de referência hexadecimal</h3>
+
+      <p>
+        Consulte a tabela para identificar os valores
+        correspondentes às letras do sistema hexadecimal.
+      </p>
+
+      <div class="reference-table">
+
+        <div><strong>Decimal</strong><strong>Hexadecimal</strong></div>
+        <div><span>0</span><span>0</span></div>
+        <div><span>1</span><span>1</span></div>
+        <div><span>2</span><span>2</span></div>
+        <div><span>3</span><span>3</span></div>
+        <div><span>4</span><span>4</span></div>
+        <div><span>5</span><span>5</span></div>
+        <div><span>6</span><span>6</span></div>
+        <div><span>7</span><span>7</span></div>
+        <div><span>8</span><span>8</span></div>
+        <div><span>9</span><span>9</span></div>
+        <div><span>10</span><span>A</span></div>
+        <div><span>11</span><span>B</span></div>
+        <div><span>12</span><span>C</span></div>
+        <div><span>13</span><span>D</span></div>
+        <div><span>14</span><span>E</span></div>
+        <div><span>15</span><span>F</span></div>
+
+      </div>
+
+    </section>
+
+    <!-- NAVEGAÇÃO -->
+
+    <nav class="game-navigation">
+
+      <a href="index.html" class="navigation-link">
+        ← Voltar ao menu principal
+      </a>
+
+      <span>Desafio 05 de Arquitetura Computacional</span>
+
+    </nav>
+
+  </main>
+
+  <footer>
+
+    <p>Atividade Avaliativa III · Arquitetura Computacional</p>
+
+    <p>Desenvolvido com HTML, CSS e JavaScript.</p>
+
+  </footer>
+
+  <script src="sistema-numericos.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2b7a78">
+
+  <title>Arquitetura Computacional - Portas Lógicas</title>
+
+  <link rel="stylesheet" href="portas-logicas.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="header-content">
+
+      <div class="logo">🧩</div>
+
+      <div>
+        <h1>Arquitetura Computacional</h1>
+        <p>Atividade Avaliativa III · Sprint 3</p>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- APRESENTAÇÃO -->
+
+    <section class="intro">
+
+      <span class="tag">JOGO EDUCATIVO · DESAFIO 03</span>
+
+      <h2>Desvende as Portas Lógicas!</h2>
+
+      <p>
+        Teste seus conhecimentos sobre lógica digital!
+        Analise as entradas das portas lógicas e descubra
+        qual será o resultado de cada operação.
+      </p>
+
+    </section>
+
+    <!-- PAINEL DO JOGO -->
+
+    <section class="game-panel">
+
+      <div class="section-heading">
+
+        <div>
+          <h2>Desafio das Portas Lógicas</h2>
+          <p>Analise a operação e escolha a saída correta.</p>
+        </div>
+
+        <div class="counter">
+          <span id="score">0 de 12</span>
+          <small>Acertos</small>
+        </div>
+
+      </div>
+
+      <!-- PROGRESSO -->
+
+      <div class="progress-container">
+
+        <div class="progress-info">
+          <span>Progresso do desafio</span>
+          <strong id="progress-text">0%</strong>
+        </div>
+
+        <div class="progress-bar">
+          <div id="progress-fill"></div>
+        </div>
+
+      </div>
+
+      <!-- QUESTÃO -->
+
+      <div class="question-container">
+
+        <div class="question-header">
+
+          <span id="question-number">QUESTÃO 01 DE 12</span>
+
+          <span id="question-category">
+            LÓGICA DIGITAL
+          </span>
+
+        </div>
+
+        <h3 id="question-title">
+          Qual será a saída desta porta lógica?
+        </h3>
+
+        <p id="question-description">
+          Analise as entradas e descubra o resultado.
+        </p>
+
+        <!-- CIRCUITO -->
+
+        <div class="circuit-container">
+
+          <div class="circuit-inputs">
+
+            <div class="input-value">
+              <span>ENTRADA A</span>
+              <strong id="input-a">1</strong>
+            </div>
+
+            <div class="input-value">
+              <span>ENTRADA B</span>
+              <strong id="input-b">1</strong>
+            </div>
+
+          </div>
+
+          <div class="logic-gate">
+
+            <span class="gate-label" id="gate-name">
+              AND
+            </span>
+
+            <div class="gate-symbol" id="gate-symbol">
+              ∧
+            </div>
+
+            <span class="gate-description" id="gate-description">
+              E
+            </span>
+
+          </div>
+
+          <div class="circuit-output">
+
+            <span>SAÍDA</span>
+
+            <strong id="output-value">?</strong>
+
+          </div>
+
+        </div>
+
+        <!-- PERGUNTA -->
+
+        <div class="answer-container">
+
+          <h3>Qual é o resultado da operação?</h3>
+
+          <p>Selecione uma das alternativas abaixo.</p>
+
+          <div class="answer-options">
+
+            <button
+              type="button"
+              class="answer-button"
+              data-answer="0">
+              0
+            </button>
+
+            <button
+              type="button"
+              class="answer-button"
+              data-answer="1">
+              1
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- FEEDBACK -->
+
+        <div
+          id="feedback"
+          class="feedback"
+          aria-live="polite">
+        </div>
+
+        <!-- CONTROLES -->
+
+        <div class="actions">
+
+          <button
+            type="button"
+            id="next-button"
+            class="primary-button"
+            disabled>
+            Próxima questão →
+          </button>
+
+          <button
+            type="button"
+            id="reset-button"
+            class="secondary-button">
+            ↻ Reiniciar jogo
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- INFORMAÇÕES -->
+
+    <section class="instructions">
+
+      <h3>Conheça as portas lógicas</h3>
+
+      <div class="instruction-grid">
+
+        <div>
+          <span>AND</span>
+          <p>
+            Retorna 1 somente quando todas as entradas são 1.
+          </p>
+        </div>
+
+        <div>
+          <span>OR</span>
+          <p>
+            Retorna 1 quando pelo menos uma entrada é 1.
+          </p>
+        </div>
+
+        <div>
+          <span>NOT</span>
+          <p>
+            Inverte o valor da entrada: 0 vira 1 e 1 vira 0.
+          </p>
+        </div>
+
+        <div>
+          <span>XOR</span>
+          <p>
+            Retorna 1 quando as entradas são diferentes.
+          </p>
+        </div>
+
+        <div>
+          <span>NAND</span>
+          <p>
+            É o inverso da operação AND.
+          </p>
+        </div>
+
+        <div>
+          <span>NOR</span>
+          <p>
+            É o inverso da operação OR.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- NAVEGAÇÃO -->
+
+    <nav class="game-navigation">
+
+      <a href="index.html" class="navigation-link">
+        ← Voltar ao menu principal
+      </a>
+
+      <span>Desafio 03 de Arquitetura Computacional</span>
+
+    </nav>
+
+  </main>
+
+  <footer>
+
+    <p>Atividade Avaliativa III · Arquitetura Computacional</p>
+
+    <p>Desenvolvido com HTML, CSS e JavaScript.</p>
+
+  </footer>
+
+  <script src="portas-logicas.js"></script>
+
+</body>
+</html>

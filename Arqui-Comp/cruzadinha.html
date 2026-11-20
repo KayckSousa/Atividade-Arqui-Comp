@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2b7a78">
+  <title>Arquitetura Computacional - Palavras Cruzadas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="header-content">
+      <div class="logo">🧩</div>
+      <div>
+        <h1>Arquitetura Computacional</h1>
+        <p>Atividade Avaliativa III · Sprint 3</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="intro">
+      <span class="tag">JOGO EDUCATIVO · DESAFIO 01</span>
+      <h2>Palavras Cruzadas</h2>
+      <p>Descubra conceitos de Arquitetura Computacional por meio de pistas horizontais e verticais. Preencha o tabuleiro com as 12 palavras do desafio.</p>
+    </section>
+
+    <section class="game-panel">
+
+      <div class="section-heading">
+        <div>
+          <h2>Tabuleiro</h2>
+          <p>Preencha as letras e confira suas respostas.</p>
+        </div>
+
+        <div class="counter">
+          <span id="score">0 de 12</span>
+          <small>Acertos</small>
+        </div>
+
+      </div>
+
+      <div class="game-layout">
+
+        <div class="board-container">
+
+          <div class="board-title">
+            <h3>Tabuleiro</h3>
+            <div>
+              <label class="toggle-black-label">
+                <input id="toggle-black" type="checkbox" checked>
+                Mostrar casas bloqueadas
+              </label>
+            </div>
+          </div>
+
+          <div class="board-scroll">
+            <div id="crossword-grid" class="crossword-grid"></div>
+          </div>
+
+          <div class="legend dynamic-legend" id="dynamic-legend"></div>
+
+        </div>
+
+        <aside class="clues-container">
+
+          <div class="clue-section">
+            <h4>Pistas</h4>
+            <div id="across-clues"></div>
+            <div id="down-clues"></div>
+          </div>
+
+          <div id="fix-panel" style="margin-top:14px"></div>
+
+          <div class="actions">
+            <button id="check-button" class="primary-button">✓ Conferir respostas</button>
+            <button id="reset-button" class="secondary-button">↻ Reiniciar jogo</button>
+            <button id="improve-button" class="secondary-button">🔀 Reorganizar tabuleiro</button>
+          </div>
+
+          <div id="feedback" class="feedback" aria-live="polite"></div>
+
+        </aside>
+
+      </div>
+
+      <nav class="game-navigation" style="margin-top:22px">
+        <a href="index.html" class="navigation-link">← Voltar ao menu principal</a>
+        <span>Desafio 01 de Arquitetura Computacional</span>
+      </nav>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Atividade Avaliativa III · Arquitetura Computacional</p>
+    <p>Desenvolvido com HTML, CSS e JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

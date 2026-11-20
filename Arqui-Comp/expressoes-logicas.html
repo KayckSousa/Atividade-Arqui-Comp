@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2b7a78">
+
+  <title>Arquitetura Computacional - Expressões Lógicas</title>
+
+  <link rel="stylesheet" href="expressoes-logicas.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="header-content">
+      <div class="logo">🧠</div>
+
+      <div>
+        <h1>Arquitetura Computacional</h1>
+        <p>Atividade Avaliativa III · Sprint 3</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- APRESENTAÇÃO -->
+
+    <section class="intro">
+
+      <span class="tag">JOGO EDUCATIVO · DESAFIO 04</span>
+
+      <h2>Desafio das Expressões Lógicas!</h2>
+
+      <p>
+        Observe o desenho da porta lógica apresentada
+        e escolha a expressão booleana que representa
+        corretamente seu funcionamento.
+      </p>
+
+    </section>
+
+    <!-- PAINEL DO JOGO -->
+
+    <section class="game-panel">
+
+      <div class="section-heading">
+
+        <div>
+          <h2>Identifique a Expressão</h2>
+          <p>Analise o circuito e escolha a alternativa correta.</p>
+        </div>
+
+        <div class="counter">
+          <span id="score">0 de 12</span>
+          <small>Acertos</small>
+        </div>
+
+      </div>
+
+      <!-- PROGRESSO -->
+
+      <div class="progress-container">
+
+        <div class="progress-info">
+          <span>Progresso do desafio</span>
+          <strong id="progress-text">0%</strong>
+        </div>
+
+        <div class="progress-bar">
+          <div id="progress-fill"></div>
+        </div>
+
+      </div>
+
+      <!-- QUESTÃO -->
+
+      <div class="question-container">
+
+        <div class="question-header">
+
+          <span id="question-number">
+            QUESTÃO 01 DE 12
+          </span>
+
+          <span id="question-category">
+            EXPRESSÕES BOOLEANAS
+          </span>
+
+        </div>
+
+        <h3 id="question-title">
+          Qual expressão representa esta porta lógica?
+        </h3>
+
+        <p id="question-description">
+          Observe as entradas e a representação da porta.
+        </p>
+
+        <!-- DESENHO DA PORTA -->
+
+        
+<div class="circuit-container">
+
+  <h4 class="circuit-title">REPRESENTAÇÃO DO CIRCUITO LÓGICO</h4>
+
+  <div class="circuit">
+
+    <div class="circuit-inputs">
+
+      <div class="input-line">
+        <span>A</span>
+        <div class="wire"></div>
+      </div>
+
+      <div class="input-line" id="input-b-container">
+        <span>B</span>
+        <div class="wire"></div>
+      </div>
+
+    </div>
+
+    <div class="gate-wrapper">
+
+      <div class="gate-symbol" id="gate-symbol">
+        <!-- SVG gerado pelo JavaScript -->
+      </div>
+
+    </div>
+
+    <div class="output-line">
+      <div class="wire"></div>
+      <span>S</span>
+    </div>
+
+  </div>
+
+  <div class="circuit-legend">
+
+    <span>
+      <i class="legend-input"></i>
+      Entradas
+    </span>
+
+    <span>
+      <i class="legend-gate"></i>
+      Porta lógica
+    </span>
+
+    <span>
+      <i class="legend-output"></i>
+      Saída
+    </span>
+
+  </div>
+
+</div>
+
+
+          <div class="logic-gate">
+
+            <span class="gate-label" id="gate-name">
+              AND
+            </span>
+
+            <div class="gate-symbol" id="gate-symbol">
+
+              <svg
+                id="gate-drawing"
+                viewBox="0 0 160 110"
+                width="160"
+                height="110"
+                xmlns="http://www.w3.org/2000/svg">
+
+                <path
+                  d="M35 10 H75 A45 45 0 0 1 75 100 H35 Z"
+                  fill="#d9eeea"
+                  stroke="#2b7a78"
+                  stroke-width="4"/>
+
+                <path
+                  d="M5 35 H35 M5 75 H35 M120 55 H155"
+                  stroke="#2b7a78"
+                  stroke-width="4"
+                  fill="none"
+                  stroke-linecap="round"/>
+
+              </svg>
+
+            </div>
+
+            <span class="gate-description" id="gate-description">
+              Porta E
+            </span>
+
+          </div>
+
+          <div class="circuit-output">
+
+            <span>SAÍDA</span>
+
+            <strong>S</strong>
+
+          </div>
+
+        </div>
+
+        <!-- ALTERNATIVAS -->
+
+        <div class="answer-container">
+
+          <h3>Qual é a expressão booleana correspondente?</h3>
+
+          <p>Selecione uma das alternativas abaixo.</p>
+
+          <div class="answer-options" id="answer-options">
+
+            <button type="button" class="answer-button" data-answer="0">
+              A + B
+            </button>
+
+            <button type="button" class="answer-button" data-answer="1">
+              A · B
+            </button>
+
+            <button type="button" class="answer-button" data-answer="2">
+              ¬A
+            </button>
+
+            <button type="button" class="answer-button" data-answer="3">
+              A ⊕ B
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- FEEDBACK -->
+
+        <div
+          id="feedback"
+          class="feedback"
+          aria-live="polite">
+        </div>
+
+        <!-- CONTROLES -->
+
+        <div class="actions">
+
+          <button
+            type="button"
+            id="next-button"
+            class="primary-button"
+            disabled>
+            Próxima questão →
+          </button>
+
+          <button
+            type="button"
+            id="reset-button"
+            class="secondary-button">
+            ↻ Reiniciar jogo
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- MATERIAL DE APOIO -->
+
+    <section class="instructions">
+
+      <h3>Conheça as expressões booleanas</h3>
+
+      <div class="instruction-grid">
+
+        <div>
+          <span>AND</span>
+          <p>
+            A · B: retorna 1 quando as duas entradas são 1.
+          </p>
+        </div>
+
+        <div>
+          <span>OR</span>
+          <p>
+            A + B: retorna 1 quando pelo menos uma entrada é 1.
+          </p>
+        </div>
+
+        <div>
+          <span>NOT</span>
+          <p>
+            ¬A: inverte o valor da entrada.
+          </p>
+        </div>
+
+        <div>
+          <span>NAND</span>
+          <p>
+            ¬(A · B): inverso da operação AND.
+          </p>
+        </div>
+
+        <div>
+          <span>NOR</span>
+          <p>
+            ¬(A + B): inverso da operação OR.
+          </p>
+        </div>
+
+        <div>
+          <span>XOR</span>
+          <p>
+            A ⊕ B: retorna 1 quando as entradas são diferentes.
+          </p>
+        </div>
+
+        <div>
+          <span>XNOR</span>
+          <p>
+            ¬(A ⊕ B): retorna 1 quando as entradas são iguais.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- NAVEGAÇÃO -->
+
+    <nav class="game-navigation">
+
+      <a href="index.html" class="navigation-link">
+        ← Voltar ao menu principal
+      </a>
+
+      <span>Desafio 04 de Arquitetura Computacional</span>
+
+    </nav>
+
+  </main>
+
+  <footer>
+
+    <p>Atividade Avaliativa III · Arquitetura Computacional</p>
+
+    <p>Desenvolvido com HTML, CSS e JavaScript.</p>
+
+  </footer>
+
+  <script src="expressoes-logicas.js"></script>
+
+</body>
+</html>
